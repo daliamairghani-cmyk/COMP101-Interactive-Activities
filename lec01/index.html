@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>COMP101 Interactive Challenges</title>
+<style>
+:root{--bg:#f6f8fb;--card:#fff;--ink:#162033;--muted:#64748b;--accent:#2b7de9;--good:#047857;--bad:#b91c1c;--line:#d7e1ee;--soft:#eaf2ff}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eff6ff,var(--bg));color:var(--ink)}.wrap{max-width:900px;margin:auto;padding:18px}.hero{padding:22px;border-radius:24px;background:#fff;box-shadow:0 8px 25px #0001;margin-bottom:16px}.tag{color:var(--accent);font-weight:700;font-size:.9rem}.hero h1{margin:.25rem 0;font-size:1.9rem}.hero p{color:var(--muted);line-height:1.5}.menu{display:grid;gap:12px}.menu button,.back,.check,.reset{border:0;border-radius:18px;padding:15px 18px;font-weight:700;cursor:pointer}.menu button{background:#fff;text-align:left;box-shadow:0 5px 18px #0001;color:var(--ink);font-size:1rem}.menu button span{display:block;color:var(--muted);font-weight:400;margin-top:4px}.activity{display:none}.activity.active{display:block}.top{display:flex;gap:10px;align-items:center;margin-bottom:14px}.back{background:#e2e8f0}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;margin:12px 0;box-shadow:0 4px 15px #0000000b}.q{font-weight:700;margin-bottom:10px}.options{display:grid;gap:9px}.option{border:1px solid var(--line);border-radius:16px;padding:13px;background:#fff;cursor:pointer;display:flex;gap:10px;align-items:center}.option input{transform:scale(1.15)}select,input[type=text]{width:100%;padding:12px;border:1px solid var(--line);border-radius:14px;font-size:1rem;background:#fff}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.check{background:var(--accent);color:#fff}.reset{background:#fff;border:1px solid var(--line);color:var(--ink)}.feedback{margin-top:9px;font-weight:700}.good{color:var(--good)}.bad{color:var(--bad)}.score{display:none;background:var(--soft);border:1px solid #b8d5ff;border-radius:20px;padding:15px;margin-top:14px;font-weight:700}.small{color:var(--muted);font-size:.9rem}.grid2{display:grid;grid-template-columns:1fr;gap:12px}@media(min-width:720px){.grid2{grid-template-columns:1fr 1fr}.hero h1{font-size:2.4rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section id="home" class="hero">
+<div class="tag">COMP101 • Lecture 1</div>
+<h1>Interactive Challenges</h1>
+<p>Choose the challenge your lecturer asks for. Answer on your phone, then check your score immediately.</p>
+<div class="menu">
+<button onclick="show('ipo')">1. IPO Quick Challenge<span>Input • Process • Output</span></button>
+<button onclick="show('elements')">2. Build the Hospital Information System<span>Match the six system elements</span></button>
+<button onclick="show('tf')">3. True or False Race<span>Information system elements</span></button>
+<button onclick="show('bitbyte')">4. Bit or Byte?<span>0/1, 8 bits, characters</span></button>
+<button onclick="show('device')">5. Guess the Device<span>Types of computers and mobile devices</span></button>
+<button onclick="show('exit')">6. Exit Ticket<span>Final quick check</span></button>
+</div>
+</section>
+
+<section id="ipo" class="activity"><div class="top"><button class="back" onclick="showHome()">← Menu</button><h2>IPO Quick Challenge</h2></div><form data-quiz="ipo">
+<div class="card"><div class="q">A nurse enters a patient's blood pressure. The system analyzes the reading and shows a warning message.</div><label>Input</label><input data-answer="Patient’s blood pressure|Patient blood pressure|blood pressure" type="text"><p class="feedback"></p><label>Process</label><input data-answer="The system analyzes the reading|system analyzes the reading|analyzes the reading" type="text"><p class="feedback"></p><label>Output</label><input data-answer="Warning message displayed|warning message|warning" type="text"><p class="feedback"></p></div><Actions></Actions></form></section>
+
+<section id="elements" class="activity"><div class="top"><button class="back" onclick="showHome()">← Menu</button><h2>Build the Hospital Information System</h2></div><form data-quiz="elements"><div class="grid2">
+<div class="card"><div class="q">Nurse</div><select data-answer="People"><option></option><option>People</option><option>Policies & Procedures</option><option>Data</option><option>Hardware</option><option>Software</option><option>Connectivity</option></select><p class="feedback"></p></div>
+<div class="card"><div class="q">Patient record</div><select data-answer="Data"><option></option><option>People</option><option>Policies & Procedures</option><option>Data</option><option>Hardware</option><option>Software</option><option>Connectivity</option></select><p class="feedback"></p></div>
+<div class="card"><div class="q">Computer</div><select data-answer="Hardware"><option></option><option>People</option><option>Policies & Procedures</option><option>Data</option><option>Hardware</option><option>Software</option><option>Connectivity</option></select><p class="feedback"></p></div>
+<div class="card"><div class="q">Hospital app / EMR</div><select data-answer="Software"><option></option><option>People</option><option>Policies & Procedures</option><option>Data</option><option>Hardware</option><option>Software</option><option>Connectivity</option></select><p class="feedback"></p></div>
+<div class="card"><div class="q">Wi‑Fi network</div><select data-answer="Connectivity"><option></option><option>People</option><option>Policies & Procedures</option><option>Data</option><option>Hardware</option><option>Software</option><option>Connectivity</option></select><p class="feedback"></p></div>
+<div class="card"><div class="q">Rules for entering patient information</div><select data-answer="Policies & Procedures"><option></option><option>People</option><option>Policies & Procedures</option><option>Data</option><option>Hardware</option><option>Software</option><option>Connectivity</option></select><p class="feedback"></p></div>
+</div><Actions></Actions></form></section>
+
+<section id="tf" class="activity"><div class="top"><button class="back" onclick="showHome()">← Menu</button><h2>True or False Race</h2></div><form data-quiz="tf"><div id="tfqs"></div><Actions></Actions></form></section>
+<section id="bitbyte" class="activity"><div class="top"><button class="back" onclick="showHome()">← Menu</button><h2>Bit or Byte?</h2></div><form data-quiz="bitbyte"><div id="bbqs"></div><Actions></Actions></form></section>
+<section id="device" class="activity"><div class="top"><button class="back" onclick="showHome()">← Menu</button><h2>Guess the Device</h2></div><form data-quiz="device"><div id="devqs"></div><Actions></Actions></form></section>
+<section id="exit" class="activity"><div class="top"><button class="back" onclick="showHome()">← Menu</button><h2>Exit Ticket</h2></div><form data-quiz="exit"><div id="exitqs"></div><Actions></Actions></form></section>
+</div>
+<script>
+const data={
+tf:[['Data are the basic units used in creation of information.','True'],['Hardware means programs and apps.','False'],['Software gives directions to hardware.','True'],['Connectivity means electronic transfer of data from one place to another.','True'],['Policies and procedures are physical devices.','False']],
+bitbyte:[['The smallest unit of data is:','Bit',['Byte','Bit']],['Usually contains 8 bits:','Byte',['Bit','Byte']],['Can represent 0 or 1:','Bit',['Byte','Bit']],['Used to represent a character, digit, or symbol:','Byte',['Bit','Byte']]],
+device:[['I am the fastest, most expensive, and most powerful computer. Used in weather forecasting and research.','Supercomputer',['Tablet','Supercomputer','Laptop','Server']],['I can accommodate hundreds of users simultaneously. Universities and hospitals may use me.','Mainframe',['Mainframe','Smartphone','Workstation','PC']],['I control access to hardware, software, and services on a network.','Server',['Server','Tablet','Laptop','Desktop']],['I am smaller than a laptop but bigger than a smartphone. I may be used in hospital operating rooms.','Tablet',['Tablet','Mainframe','Supercomputer','Workstation']],['I am portable and can have the same power as a PC.','Laptop',['Laptop','Server','Smartphone','Mainframe']]],
+exit:[['What are the three parts of the IPO cycle?','Input / Process / Output',['Input / Process / Output','People / Data / Software','Bit / Byte / Network']],['Name one element of an information system.','People',['People','Mouse only','Keyboard only']],['A byte usually contains:','8 bits',['1 bit','8 bits','100 bits']],['Which computer type can accommodate hundreds of users simultaneously?','Mainframe',['Laptop','Mainframe','Tablet']]]
+};
+function show(id){document.getElementById('home').style.display='none';document.querySelectorAll('.activity').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');scrollTo(0,0)}
+function showHome(){document.getElementById('home').style.display='block';document.querySelectorAll('.activity').forEach(x=>x.classList.remove('active'));scrollTo(0,0)}
+function radioCard(q,a,opts,i){return `<div class="card"><div class="q">${i}. ${q}</div><div class="options">${opts.map(o=>`<label class="option"><input name="q${i}" data-answer="${a}" value="${o}" type="radio"> ${o}</label>`).join('')}</div><p class="feedback"></p></div>`}
+function fill(){document.getElementById('tfqs').innerHTML=data.tf.map((x,i)=>radioCard(x[0],x[1],['True','False'],i+1)).join('');document.getElementById('bbqs').innerHTML=data.bitbyte.map((x,i)=>radioCard(x[0],x[1],x[2],i+1)).join('');document.getElementById('devqs').innerHTML=data.device.map((x,i)=>radioCard(x[0],x[1],x[2],i+1)).join('');document.getElementById('exitqs').innerHTML=data.exit.map((x,i)=>radioCard(x[0],x[1],x[2],i+1)).join('');document.querySelectorAll('Actions').forEach(a=>a.outerHTML='<div class="actions"><button class="check" type="submit">Check Answer</button><button class="reset" type="reset">Try Again</button></div><div class="score"></div>')}
+function norm(s){return (s||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,' ').trim()}
+function check(form){let items=[...form.querySelectorAll('input[type=text],select')];let radios=[...new Set([...form.querySelectorAll('input[type=radio]')].map(r=>r.name))];let total=items.length+radios.length,score=0;items.forEach(el=>{let ok=el.dataset.answer.split('|').some(a=>norm(a)==norm(el.value));mark(el,ok,el.dataset.answer.split('|')[0]);if(ok)score++});radios.forEach(n=>{let chosen=form.querySelector(`input[name="${n}"]:checked`);let any=form.querySelector(`input[name="${n}"]`);let ans=any.dataset.answer;let fb=any.closest('.card').querySelector('.feedback');if(chosen&&chosen.value==ans){score++;fb.textContent='✓ Correct';fb.className='feedback good'}else{fb.textContent='✗ Correct answer: '+ans;fb.className='feedback bad'}});let s=form.querySelector('.score');s.style.display='block';s.textContent=`Your Score: ${score} / ${total} ${score==total?'— Excellent!':'— Review and try again.'}`}
+function mark(el,ok,ans){let fb=el.nextElementSibling;fb.textContent=ok?'✓ Correct':'✗ Suggested answer: '+ans;fb.className='feedback '+(ok?'good':'bad')}
+fill();document.querySelectorAll('form').forEach(f=>{f.addEventListener('submit',e=>{e.preventDefault();check(f)});f.addEventListener('reset',()=>setTimeout(()=>{f.querySelectorAll('.feedback').forEach(x=>x.textContent='');let s=f.querySelector('.score');if(s)s.style.display='none'},0))});
+</script>
+</body>
+</html>
